@@ -1,11 +1,14 @@
-﻿using System.Collections.Generic;
+﻿
+using System.Collections.Generic;
+
 namespace ShiftIQ.API.Models
 {
     public class Company
     {
         public int CompanyId { get; set; }
-        public string Name { get; set; }
-        public string Status { get; set; }
+
+        public string Name { get; set; } = string.Empty;
+        public string Status { get; set; } = string.Empty;
         public DateTime CreatedAt { get; set; }
 
         public ICollection<Branch> Branches { get; set; } = new List<Branch>();

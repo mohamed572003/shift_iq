@@ -15,12 +15,13 @@ namespace ShiftIQ.API.Models
         { get; set; } = new List<RewardRequest>();
         public ICollection<AIInsight> AIInsights { get; set; } = new List<AIInsight>();
         public int DepartmentId { get; set; }
-        public Department Department { get; set; }
+        public Department Department { get; set; } = null!;
         public int UserId { get; set; }
-        public User User { get; set; }
-        public string EmployeeNumber { get; set; }
-        public string JobTitle { get; set; }
-        public string Status { get; set; }
+        public User User { get; set; } = null!;
+
+        public string EmployeeNumber { get; set; } = string.Empty;
+        public string JobTitle { get; set; } = string.Empty;
+        public string Status { get; set; } = string.Empty;
         public DateTime HiredOn { get; set; }
     }
 }
